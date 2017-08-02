@@ -33,7 +33,7 @@ people:
 
 - name: Anastasia 
   pic: 3
-  position: Reasercher,
+  position: Reasercher, Developer
   social:
     - title: twitter
       url: #
@@ -44,7 +44,18 @@ people:
 
 - name: Agnieszka 
   pic: 4
-  position: Reasercher,
+  position: Reasercher, Developer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: Wiktor 
+  pic: 5
+  position: Reasercher, Developer
   social:
     - title: twitter
       url: #
