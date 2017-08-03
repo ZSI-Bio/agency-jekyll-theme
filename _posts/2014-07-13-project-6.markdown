@@ -1,11 +1,11 @@
 ---
-title: Round Icons
-subtitle: Graphic Design
+title: Academic background
+subtitle: 
 layout: default
 modal-id: 6
 date: 2014-07-15
-img: roundicons.png
-thumbnail: roundicons-thumbnail.png
+img: med_it.jpg
+thumbnail: med_it_th.jpg
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
