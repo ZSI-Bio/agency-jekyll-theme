@@ -4,32 +4,28 @@ baseurl: /agency-jekyll-theme/
 # Site settings
 title: biodatageeks
 email: your-email@domain.com
-description: "Research team at Warsaw University of Technology"
+description: "Bioinformatics research team at Warsaw University of Technology"
 
 
 # Team names, titles and social links
 people:
-- name: Tomasz Gambin
+- name: Tomasz 
   pic: 1
   position: Team Leader
   social:
     - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+      url: https://twitter.com/GambinTomasz
+    - title: linkedin
+      url: https://pl.linkedin.com/in/tomasz-gambin-a763253
 
-- name: Marek Wiewiorka
+- name: Marek 
   pic: 2
   position: Technology Leader
   social:
     - title: twitter
-      url: #
-    - title: facebook
-      url: #
+      url: https://twitter.com/MarekWiewiorka
     - title: linkedin
-      url: #
+      url: https://pl.linkedin.com/in/marekwiewiorka
 
 - name: Anastasia 
   pic: 3
@@ -37,21 +33,17 @@ people:
   social:
     - title: twitter
       url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+    - title: linkedin
+      url: https://pl.linkedin.com/in/ahryhorzhevska
 
 - name: Agnieszka 
   pic: 4
   position: Reasercher, Developer
   social:
     - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+      url: https://twitter.com/agaszmurlo
+    - title: linkedin
+      url: https://pl.linkedin.com/in/abelkiewicz
 
 - name: Wiktor 
   pic: 5
@@ -59,28 +51,20 @@ people:
   social:
     - title: twitter
       url: #
-    - title: facebook
-      url: #
-    - title: google-plus
+    - title: linkedin
       url: #
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
     url: http://twitter.com/biodatageeks
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/ZSIBio
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Wydział Elektroniki Politechniki Warszawskiej, Instytut Informatyki
+  - line: Nowowiejska 15/19, 00-665 Warszawa
 
 # Build settings
 markdown: kramdown
