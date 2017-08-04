@@ -5,7 +5,8 @@ pipeline {
                 steps {
                   echo "Building page"
                   sh "docker pull jekyll/jekyll"
-                  sh "JEKYLL_VERSION=3.5 docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll:$JEKYLL_VERSION jekyll build"
+                  sh 'export JEKYLL_VERSION=3.5 && docker run --rm --volume=$(pwd | sed "s|/var/jenkins_home|/data/home/jenkins|g"):/srv/jekyll -i jekyll/jekyll:$JEKYLL_VERSION jekyll build '
+                  sh 'chown -R zsibio-jenkins *'
                 }
 
                 }
@@ -19,7 +20,7 @@ pipeline {
             stage('Start Docker container') {
                     steps {
                       echo "Starting a fresh Docker container"
-                      sh "docker stop zsi-bio-page  || docker rm zsi-bio-page"
+                      sh 'if [ $(docker ps | grep zsi-bio-page | wc -l) -gt 0 ]; then docker stop zsi-bio-page && docker rm zsi-bio-page; fi'
                       sh "docker run -d --name zsi-bio-page zsi-bio/zsi-bio-page"
                     }
 
