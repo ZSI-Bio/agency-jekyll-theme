@@ -6,7 +6,7 @@ pipeline {
                   echo "Building page"
                   sh "docker pull jekyll/jekyll"
                   sh 'export JEKYLL_VERSION=3.5 && docker run --rm --volume=$(pwd | sed "s|/var/jenkins_home|/data/home/jenkins|g"):/srv/jekyll -i jekyll/jekyll:$JEKYLL_VERSION jekyll build '
-                  sh 'sudo chown -R zsibio-jenkins $pwd'
+                  sh 'sudo chown -R zsibio-jenkins $PWD'
                 }
 
                 }
