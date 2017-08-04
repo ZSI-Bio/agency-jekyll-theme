@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+       stages {
+            stage('Build page') {
+                steps {
+                  echo "Building page"
+                  sh "docker pull jekyll/jekyll"
+                  sh "JEKYLL_VERSION=3.5 docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll:$JEKYLL_VERSION jekyll build"
+                }
+
+                }
+            stage('Rebuild Docker container') {
+                    steps {
+                      echo "Building a fresh Docker container"
+                      sh "docker build -t zsi-bio/zsi-bio-page ."
+                    }
+
+            }
+            stage('Start Docker container') {
+                    steps {
+                      echo "Starting a fresh Docker container"
+                      sh "docker stop zsi-bio-page  || docker rm zsi-bio-page"
+                      sh "docker run -d --name zsi-bio-page zsi-bio/zsi-bio-page"
+                    }
+
+            }
+
+      }
+}
